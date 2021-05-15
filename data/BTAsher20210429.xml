@@ -1329,7 +1329,8 @@
 					פורטו לכל התועים*) ההולכים <lb/>ל<name ref="#K691" type="place">ירושלם</name> בספינות ויורד לפניה נהר <lb/>הנקרא
 						<name ref="#U13">נחל קדומים</name> ושם כמו מאתים <lb/>יהודים ובראשם
 						<persName>רבי צדוק</persName> ו<persName>רבי יפת</persName> ו<persName>רבי
-						יונה ז״ל</persName>. </seg><seg xml:id="GN9S2">ומשם שלשה פרסאות ל <name
+						יונה ז״ל</persName>. </seg>
+				<seg xml:id="GN9S2">ומשם שלשה פרסאות ל <name
 						ref="#K791">כיפש</name>**) <lb/>היא <name type="id">גת החפר</name> אשר
 					על-שפת הים </seg>
 				<seg xml:id="GN9S3">ומצד <lb/>אחר <name ref="#K1156" type="place">הר הכרמל</name> עליה
@@ -1386,6 +1387,7 @@
 				<seg xml:id="GN9S12"> וביניהם בעמק עיר <name ref="#K5412" type="place">שכם</name>.</seg>
 				<seg xml:id="GN9S13"> ומשם ארבע פרסאות ל<name ref="#K33871">הר הגלבוע</name> וקוראין להם
 					אדום <name ref="#K33871" type="translation">מונטו גלבוי</name>. <lb/>והיא ארץ יבשה מאד.</seg>
+				<seg xml:id="GN9S14">…</seg>
 				<seg xml:id="GN9S15"> ומשם חמשה <lb/>פרסאות ל<name ref="#K21722">עמק אילון</name>
 					וקוראין אותו אדום <name>וואל דלונא</name>.</seg>
 				<seg xml:id="GN9S16"> ומשם פרסה אחת ל<name>גראן דוד</name> היא עיר

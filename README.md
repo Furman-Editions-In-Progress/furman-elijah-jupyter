@@ -4,6 +4,8 @@
 
 This repository hosts Jupyter notebooks illustrating usage of the [CITE Architecture](http://cite-architecture.org) based on the work of the [ElijahLab at the University of Haifa](http://elijahlab.haifa.ac.il/).
 
+<p style="color: red;">With the "sunsetting" of the <a href="https://bintray.com">Bintray</a> service, the CITE code libraries in Scala are temporarily unavailable. The instructions below will not work until we update the Jupyter notebooks to pull libraries from a different Maven repository. Our apologies for the inconvenience. — May 16, 2021.</p>
+
 These notebooks use the [Almond kernel](https://almond.sh/).  You can run a notebook server with the Almond kernel using a docker container like this:
 
     docker run -it --rm -p 8888:8888 almondsh/almond:0.9.0

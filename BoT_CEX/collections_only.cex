@@ -1,0 +1,247 @@
+// 
+
+#!cexversion
+3.0
+
+#!citelibrary
+name#Demonstration CEX of Benjamin of Tudela’s Itineraries. Plain text editions and Indices.
+urn#urn:cite2:fu_elijah:cexCatalogs.2021a:bot_indexed_editions
+license#CC Share Alike.  For details, see more info.
+
+
+#!datamodels
+Collection#Model#Label#Description
+urn:cite2:cite:verbs.v1:#urn:cite2:cite:datamodels.v1:commentarymodel#Commentary Model#URN comments on URN. See documentation at <https://github.com/cite-architecture/commentary>.
+//
+// We add an extensions_text datamodel. This points to a collection of extended_text_properties.
+//
+urn:cite2:fufolio:extended_text_properties.v1:#urn:cite2:cite:datamodels.v1:extensions_text#Extended Text Properies#Extended Text Property. See documentation at <https://github.com/cite-architecture/>.
+
+//
+// Collection Inventory:
+// Commentaries can be in the form of Collections as well as Texts
+// so we add a Commentary Collection here
+//
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:cite:datamodels.v1:#CITE data models#urn:cite2:cite:datamodels.v1.label:##Public domain
+urn:cite2:cite:verbs.v1:#Collection of verbal relations#urn:cite2:cite:verbs.v1.label:##Public Domain
+urn:cite2:elijahfurman:botPlaces.2021a:#Geographic places mentioned in Benjamin of Tudela's Itinerary#urn:cite2:elijahfurman:botPlaces.2021a.label:##CC-BY-SA
+//
+// This is a collection of extended text properties
+//
+urn:cite2:fufolio:extended_text_properties.v1:#Extended Text Properties#urn:cite2:fufolio:extended_text_properties.v1.label:##CC-BY-SA
+
+
+
+// 
+// Properties for the extended_text_properties extension
+// In addition to the (standard) URN and label, there are:
+// a propertyurn, identifying the property of type "string", and
+// its type, an enumerated list of supported extensions.
+// (a different collection could define any other set of extension types.)
+//
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fufolio:extended_text_properties.v1.urn:#URN#Cite2Urn#
+urn:cite2:fufolio:extended_text_properties.v1.label:#Label#String#
+urn:cite2:fufolio:extended_text_properties.v1.propertyurn:#Property URN#Cite2Urn#
+urn:cite2:fufolio:extended_text_properties.v1.extendedtype:#Extended Text Type#String#geojson,pleiadesuri,latlong,markdown,teixml
+
+//
+// Records for the extended_text_properties collection.
+// Note that we can identify properties at the versioned-collection-level _or_
+// at the individual object level.
+//
+#!citedata
+urn#label#propertyurn#extendedtype
+urn:cite2:fufolio:extended_text_properties.v1:hdt_pleiadesPlaces#Places in Herodotus Identified by Pleiades URI#urn:cite2:fufolio:hdtPlaces.pleiades.uri:#pleiadesuri
+urn:cite2:fufolio:extended_text_properties.v1:hdt_geojson#Places in Herodotus Identified by GeoJson#urn:cite2:fufolio:hdtPlaces.geojson.json:#geojson
+urn:cite2:fufolio:extended_text_properties.v1:elijahPlaces#A collection of places mentioned by Benjamin of Tudela#urn:cite2:elijahfurman:botPlaces.2021a.location:#latlong
+urn:cite2:fufolio:extended_text_properties.v1:kima#Links to Kima URIs#urn:cite2:elijahfurman:botPlaces.2021a.kimaUri:#markdown
+
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:verbs.v1.urn:#URN#Cite2Urn#
+urn:cite2:cite:verbs.v1.label:#label#String#
+urn:cite2:cite:verbs.v1.description:#description#String#
+
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:datamodels.v1.urn:#Data model#Cite2Urn#
+urn:cite2:cite:datamodels.v1.label:#Label#String#
+urn:cite2:cite:datamodels.v1.description:#Description#String#
+
+
+#!citedata
+urn#label#description
+urn:cite2:cite:verbs.v1:commentsOn#comments on#subject[Urn] comments on object[Urn]
+urn:cite2:cite:verbs.v1:illustrates#illustrates#subject[Urn] comments on object[Urn]
+urn:cite2:cite:verbs.v1:hasOnIt#has on it#subject[Urn] comments on object[Urn]
+
+
+#!citedata
+urn#label#description
+urn:cite2:cite:datamodels.v1:binaryimg#Binary image model#Model of binary images manipulable by URN reference.  See <TBA>.
+urn:cite2:cite:datamodels.v1:imagemodel#Citable images#Model of citable images from the CITE Architecture.  See <http://cite-architecture.github.io/imagemodel/>.
+urn:cite2:cite:datamodels.v1:dse#DSE model#Diplomatic Scholarly Edition (DSE) model.  See documentation at <https://github.com/cite-architecture/dse>.
+urn:cite2:cite:datamodels.v1:commentarymodel#Commentary model#A citable text or object comments on a citable text or object.  See documentation at <https://github.com/cite-architecture/dse>.
+urn:cite2:cite:datamodels.v1:extensions_text#Extended Text Properties#Extended Text Properties. See dcoumentation at <https://github.com/cite-architecture/extended_text_properties>.
+
+// Geographic collections
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:elijahfurman:botPlaces.2021a.urn:#URN#Cite2Urn#
+urn:cite2:elijahfurman:botPlaces.2021a.label:#Label#String#
+urn:cite2:elijahfurman:botPlaces.2021a.location:#Location Data#String#
+urn:cite2:elijahfurman:botPlaces.2021a.placeName:#Place Name#String#
+urn:cite2:elijahfurman:botPlaces.2021a.kimaUri:#KIMA URI#String#
+
+
+
+
+
+
+
+
+
+
+#!citedata
+urn#label#location#placeName#kimaUri
+urn:cite2:elijahfurman:botPlaces.2021a:K6347#Place ID K6347#41.65606, -0.87734#Zaragoza#[Database record](http://geo-kima.org/Place/6347)
+urn:cite2:elijahfurman:botPlaces.2021a:GN3123754#Place ID GN3123754#40.73024,, 0.86985#Spain#[Database record](https://www.geonames.org/3123754/)
+urn:cite2:elijahfurman:botPlaces.2021a:K9805#Place ID K9805#40.815111, 0.523778#Tortosa#[Database record](http://geo-kima.org/place/9805)
+urn:cite2:elijahfurman:botPlaces.2021a:K7559#Place ID K7559#41.119196, 1.258058#Tarragona#[Database record](http://geo-kima.org/place/7559)
+urn:cite2:elijahfurman:botPlaces.2021a:K6471#Place ID K6471#40,, -3#Spain#[Database record](http://geo-kima.org/place/6471)
+urn:cite2:elijahfurman:botPlaces.2021a:K582#Place ID K582#41.384106, 2.175422#Barcelona#[Database record](http://geo-kima.org/place/582)
+urn:cite2:elijahfurman:botPlaces.2021a:K251#Place ID K251#43.719417, 10.400106#No place name.#[Database record](http://geo-kima.org/place/251)
+urn:cite2:elijahfurman:botPlaces.2021a:K877#Place ID K877#44.40766, 8.93151#No place name.#[Database record](http://geo-kima.org/place/877)
+urn:cite2:elijahfurman:botPlaces.2021a:K667#Place ID K667#31.195371, 29.904133#No place name.#[Database record](http://geo-kima.org/place/667)
+urn:cite2:elijahfurman:botPlaces.2021a:K2501#Place ID K2501#-80, 0#No place name.#[Database record](http://geo-kima.org/place/2501)
+urn:cite2:elijahfurman:botPlaces.2021a:K8720#Place ID K8720#41.98311, 2.82493#No place name.#[Database record](http://geo-kima.org/place/8720)
+urn:cite2:elijahfurman:botPlaces.2021a:K10031#Place ID K10031#43.184722, 3.003611#No place name.#[Database record](http://geo-kima.org/place/10031)
+urn:cite2:elijahfurman:botPlaces.2021a:K7195#Place ID K7195#43.339552, 3.214097#No place name.#[Database record](http://geo-kima.org/place/7195)
+urn:cite2:elijahfurman:botPlaces.2021a:K7467#Place ID K7467#43.608176, 3.8794455#No place name.#[Database record](http://geo-kima.org/place/7467)
+urn:cite2:elijahfurman:botPlaces.2021a:K7951#Place ID K7951#-80, 0#No place name.#[Database record](http://geo-kima.org/place/7951)
+urn:cite2:elijahfurman:botPlaces.2021a:K10968#Place ID K10968#-80, 0#No place name.#[Database record](http://geo-kima.org/place/10968)
+urn:cite2:elijahfurman:botPlaces.2021a:K7637#Place ID K7637#-80, 0#No place name.#[Database record](http://geo-kima.org/place/7637)
+urn:cite2:elijahfurman:botPlaces.2021a:K6399#Place ID K6399#-80, 0#No place name.#[Database record](http://geo-kima.org/place/6399)
+urn:cite2:elijahfurman:botPlaces.2021a:K12708#Place ID K12708#-80, 0#No place name.#[Database record](http://geo-kima.org/place/12708)
+urn:cite2:elijahfurman:botPlaces.2021a:K12204#Place ID K12204#43.67778, 4.13611#No place name.#[Database record](http://geo-kima.org/place/12204)
+urn:cite2:elijahfurman:botPlaces.2021a:K7808#Place ID K7808#43.6942, 4.2769#No place name.#[Database record](http://geo-kima.org/place/7808)
+urn:cite2:elijahfurman:botPlaces.2021a:K10262#Place ID K10262#43.6786, 4.4317#No place name.#[Database record](http://geo-kima.org/place/10262)
+urn:cite2:elijahfurman:botPlaces.2021a:K2047#Place ID K2047#-80, 0#No place name.#[Database record](http://geo-kima.org/place/2047)
+urn:cite2:elijahfurman:botPlaces.2021a:K8962#Place ID K8962#-80, 0#No place name.#[Database record](http://geo-kima.org/place/8962)
+urn:cite2:elijahfurman:botPlaces.2021a:K7224#Place ID K7224#43.676944, 4.628611#No place name.#[Database record](http://geo-kima.org/place/7224)
+urn:cite2:elijahfurman:botPlaces.2021a:K7085#Place ID K7085#43.299467, 5.365307#No place name.#[Database record](http://geo-kima.org/place/7085)
+urn:cite2:elijahfurman:botPlaces.2021a:K8782#Place ID K8782#35.9000363, -5.4164103#No place name.#[Database record](http://geo-kima.org/place/8782)
+urn:cite2:elijahfurman:botPlaces.2021a:K6491#Place ID K6491#43.840677, 10.50602#No place name.#[Database record](http://geo-kima.org/place/6491)
+urn:cite2:elijahfurman:botPlaces.2021a:K6800#Place ID K6800#41.1061258, 14.2130486#No place name.#[Database record](http://geo-kima.org/place/6800)
+urn:cite2:elijahfurman:botPlaces.2021a:K9790#Place ID K9790#40.84394, 14.0952#No place name.#[Database record](http://geo-kima.org/place/9790)
+urn:cite2:elijahfurman:botPlaces.2021a:K9809#Place ID K9809#40.624604, 14.365806#No place name.#[Database record](http://geo-kima.org/place/9809)
+urn:cite2:elijahfurman:botPlaces.2021a:K440#Place ID K440#41.89262, 12.4843457#No place name.#[Database record](http://geo-kima.org/place/440)
+urn:cite2:elijahfurman:botPlaces.2021a:K673#Place ID K673#40.829595, 14.21755#No place name.#[Database record](http://geo-kima.org/place/673)
+urn:cite2:elijahfurman:botPlaces.2021a:K6373#Place ID K6373#40.6779567, 14.7659122#No place name.#[Database record](http://geo-kima.org/place/6373)
+urn:cite2:elijahfurman:botPlaces.2021a:K7024#Place ID K7024#41.6084823, 15.8897665#No place name.#[Database record](http://geo-kima.org/place/7024)
+urn:cite2:elijahfurman:botPlaces.2021a:K6262#Place ID K6262#40.63443, 14.60318#No place name.#[Database record](http://geo-kima.org/place/6262)
+urn:cite2:elijahfurman:botPlaces.2021a:K6449#Place ID K6449#41.13155, 14.77433#No place name.#[Database record](http://geo-kima.org/place/6449)
+urn:cite2:elijahfurman:botPlaces.2021a:K12281#Place ID K12281#40.99571, 15.65578#No place name.#[Database record](http://geo-kima.org/place/12281)
+urn:cite2:elijahfurman:botPlaces.2021a:K7555#Place ID K7555#41.25, 15.75#No place name.#[Database record](http://geo-kima.org/place/7555)
+urn:cite2:elijahfurman:botPlaces.2021a:GN3182747#Place ID GN3182747#42.8554, 13.57495#No place name.#[Database record](https://www.geonames.org/3182747)
+urn:cite2:elijahfurman:botPlaces.2021a:K7879#Place ID K7879#41.27733, 16.41011#No place name.#[Database record](http://geo-kima.org/place/7879)
+urn:cite2:elijahfurman:botPlaces.2021a:K691#Place ID K691#31.776667, 35.234167#No place name.#[Database record](http://geo-kima.org/place/691)
+urn:cite2:elijahfurman:botPlaces.2021a:K7504#Place ID K7504#41.13031, 16.87014#No place name.#[Database record](http://geo-kima.org/Places/7504)
+urn:cite2:elijahfurman:botPlaces.2021a:K6284#Place ID K6284#37.53667612, 14.08648465#No place name.#[Database record](http://geo-kima.org/place/6284)
+urn:cite2:elijahfurman:botPlaces.2021a:K8176#Place ID K8176#40.476034, 17.228553#No place name.#[Database record](http://geo-kima.org/place/8176)
+urn:cite2:elijahfurman:botPlaces.2021a:K7660#Place ID K7660#40.75, 17.75#No place name.#[Database record](http://geo-kima.org/place/7660)
+urn:cite2:elijahfurman:botPlaces.2021a:K11068#Place ID K11068#40.641136, 17.946867#No place name.#[Database record](http://geo-kima.org/place/11068)
+urn:cite2:elijahfurman:botPlaces.2021a:K7029#Place ID K7029#40.145948, 18.490953#No place name.#[Database record](http://geo-kima.org/place/7029)
+urn:cite2:elijahfurman:botPlaces.2021a:K1039#Place ID K1039#39.60733, 19.92178#No place name.#[Database record](http://geo-kima.org/Places/1039)
+urn:cite2:elijahfurman:botPlaces.2021a:K20954#Place ID K20954#39.159, 20.985#No place name.#[Database record](http://geo-kima.org/Place/20954)
+urn:cite2:elijahfurman:botPlaces.2021a:GN265507#Place ID GN265507#40.66152, 22.7119#No place name.#[Database record](https://www.geonames.org/265507)
+urn:cite2:elijahfurman:botPlaces.2021a:U1#Place ID U1#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K12768#Place ID K12768#38.243265, 21.738518#No place name.#[Database record](http://geo-kima.org/place/12768)
+urn:cite2:elijahfurman:botPlaces.2021a:K21742#Place ID K21742#38.39167, 21.8275#No place name.#[Database record](http://geo-kima.org/Places/Details?id=21742)
+urn:cite2:elijahfurman:botPlaces.2021a:GN259862#Place ID GN259862#38.4753859, 22.4689446#No place name.#[Database record](https://www.geonames.org/259862)
+urn:cite2:elijahfurman:botPlaces.2021a:GN255730#Place ID GN255730#38.53528, 22.62188#No place name.#[Database record](https://www.geonames.org/255730)
+urn:cite2:elijahfurman:botPlaces.2021a:GN259289#Place ID GN259289#37.906045, 22.878721#No place name.#[Database record](https://www.geonames.org/259289)
+urn:cite2:elijahfurman:botPlaces.2021a:K14830#Place ID K14830#38.318092, 23.255096#No place name.#[Database record](http://geo-kima.org/place/14830)
+urn:cite2:elijahfurman:botPlaces.2021a:K8822#Place ID K8822#39.04697922, 22.97947876#No place name.#[Database record](http://geo-kima.org/place/8822)
+urn:cite2:elijahfurman:botPlaces.2021a:K6927#Place ID K6927#41.012379, 28.975926#No place name.#[Database record](http://geo-kima.org/place/6927)
+urn:cite2:elijahfurman:botPlaces.2021a:K14277#Place ID K14277#38.464, 23.602#No place name.#[Database record](http://data.geo-kima.org/14277)
+urn:cite2:elijahfurman:botPlaces.2021a:GN258577#Place ID GN258577#38.567348, 23.281349#No place name.#[Database record](https://www.geonames.org/258577)
+urn:cite2:elijahfurman:botPlaces.2021a:GN261211#Place ID GN261211#38.77844, 22.78573#No place name.#[Database record](https://www.geonames.org/261211)
+urn:cite2:elijahfurman:botPlaces.2021a:GN258620#Place ID GN258620#38.9, 22.43333#No place name.#[Database record](https://www.geonames.org/258620)
+urn:cite2:elijahfurman:botPlaces.2021a:K9259#Place ID K9259#-80, 0#No place name.#[Database record](http://geo-kima.org/place/9259)
+urn:cite2:elijahfurman:botPlaces.2021a:GN255638#Place ID GN255638#38.94813, 22.8398#No place name.#[Database record](https://www.geonames.org/255638)
+urn:cite2:elijahfurman:botPlaces.2021a:BJ5#Place ID BJ5#39.183, 22.759#No place name.#[Database record](http://www.byzantinejewry.net/applications/mjcb/show_evidence_details.php?evidence_id=5)
+urn:cite2:elijahfurman:botPlaces.2021a:BJ9#Place ID BJ9#39.687, 22.725#No place name.#[Database record](http://www.byzantinejewry.net/applications/mjcb/show_evidence_details.php?evidence_id=9)
+urn:cite2:elijahfurman:botPlaces.2021a:K103#Place ID K103#40.64361, 22.93086#No place name.#[Database record](http://geo-kima.org/place/103)
+urn:cite2:elijahfurman:botPlaces.2021a:GN736795#Place ID GN736795#41.07041, 23.46064#No place name.#[Database record](https://www.geonames.org/736795)
+urn:cite2:elijahfurman:botPlaces.2021a:K14269#Place ID K14269#41.15283, 24.1473#No place name.#[Database record](http://geo-kima.org/place/14269)
+urn:cite2:elijahfurman:botPlaces.2021a:GN735861#Place ID GN735861#40.93959, 24.40687#No place name.#[Database record](https://www.geonames.org/735861)
+urn:cite2:elijahfurman:botPlaces.2021a:K4579#Place ID K4579#40.19406, 26.41122#No place name.#[Database record](http://geo-kima.org/place/4579)
+urn:cite2:elijahfurman:botPlaces.2021a:U4#Place ID U4#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:Q1404297#Place ID Q1404297#-80, 0#No place name.#[Database record](https://www.wikidata.org/wiki/Q1404297)
+urn:cite2:elijahfurman:botPlaces.2021a:K22613#Place ID K22613#34.5, 46.5#No place name.#[Database record](http://geo-kima.org/place/22613)
+urn:cite2:elijahfurman:botPlaces.2021a:K7639#Place ID K7639#-80, 0#No place name.#[Database record](http://geo-kima.org/Places/Details?id=7639)
+urn:cite2:elijahfurman:botPlaces.2021a:K8046#Place ID K8046#19.21140877, 30.56732963#No place name.#[Database record](http://geo-kima.org/place/8046)
+urn:cite2:elijahfurman:botPlaces.2021a:U6#Place ID U6#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:Q171150#Place ID Q171150#47.16508477, 19.42015481#No place name.#[Database record](https://www.wikidata.org/wiki/Q171150)
+urn:cite2:elijahfurman:botPlaces.2021a:U2#Place ID U2#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:U3#Place ID U3#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K662#Place ID K662#33.31468, 44.39044#No place name.#[Database record](http://geo-kima.org/place/662)
+urn:cite2:elijahfurman:botPlaces.2021a:Q1472490#Place ID Q1472490#41.0339, 28.9403#No place name.#[Database record](https://www.wikidata.org/wiki/Q1472490)
+urn:cite2:elijahfurman:botPlaces.2021a:U7#Place ID U7#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K7544#Place ID K7544#41.031944, 28.976111#No place name.#[Database record](http://geo-kima.org/place/7544)
+urn:cite2:elijahfurman:botPlaces.2021a:K22213#Place ID K22213#40.97801, 27.50852#No place name.#[Database record](http://geo-kima.org/place/22213)
+urn:cite2:elijahfurman:botPlaces.2021a:GN746983#Place ID GN746983#40.41028, 26.67083#No place name.#[Database record](http://sws.geonames.org/746983)
+urn:cite2:elijahfurman:botPlaces.2021a:PL844961#Place ID PL844961#41.18195, 31.387409#No place name.#[Database record](http://pleiades.stoa.org/places/844961)
+urn:cite2:elijahfurman:botPlaces.2021a:GN256866#Place ID GN256866#39.10772, 26.55529#No place name.#[Database record](http://sws.geonames.org/256866)
+urn:cite2:elijahfurman:botPlaces.2021a:K17289#Place ID K17289#38.414, 26.053#No place name.#[Database record](http://geo-kima.org/place/17289)
+urn:cite2:elijahfurman:botPlaces.2021a:K14268#Place ID K14268#37.73, 26.84#No place name.#[Database record](http://geo-kima.org/place/14268)
+urn:cite2:elijahfurman:botPlaces.2021a:K2044#Place ID K2044#36.43333333, 28.21666667#No place name.#[Database record](http://geo-kima.org/place/2044)
+urn:cite2:elijahfurman:botPlaces.2021a:K7562#Place ID K7562#35.04088353, 33.27533716#No place name.#[Database record](http://geo-kima.org/place/7562)
+urn:cite2:elijahfurman:botPlaces.2021a:PL638939#Place ID PL638939#36.465278, 34.154167#No place name.#[Database record](https://pleiades.stoa.org/places/638939)
+urn:cite2:elijahfurman:botPlaces.2021a:K16830#Place ID K16830#36.191111, 44.009167#No place name.#[Database record](http://geo-kima.org/Places/Details?id=16830)
+urn:cite2:elijahfurman:botPlaces.2021a:U10#Place ID U10#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:U11#Place ID U11#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:U9#Place ID U9#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K11503#Place ID K11503#36.200663, 36.165318#No place name.#[Database record](http://data.geo-kima.org/Places/11503)
+urn:cite2:elijahfurman:botPlaces.2021a:K5150#Place ID K5150#35.2728339, 36.4825754#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=5150)
+urn:cite2:elijahfurman:botPlaces.2021a:K11554#Place ID K11554#35.1359, 36.7495#No place name.#[Database record](http://geo-kima.org/place/11554)
+urn:cite2:elijahfurman:botPlaces.2021a:GN173576#Place ID GN173576#35.53168, 35.79011#No place name.#[Database record](http://geonames.org/173576)
+urn:cite2:elijahfurman:botPlaces.2021a:K18052#Place ID K18052#34.116667, 35.65#No place name.#[Database record](http://geo-kima.org/Places/Details?id=18052)
+urn:cite2:elijahfurman:botPlaces.2021a:K15821#Place ID K15821#34.30096, 36.11575#No place name.#[Database record](http://geo-kima.org/Places/Details?id=15821)
+urn:cite2:elijahfurman:botPlaces.2021a:GN173389#Place ID GN173389#35.09855, 36.15984#No place name.#[Database record](http://geonames.org/173389)
+urn:cite2:elijahfurman:botPlaces.2021a:U8#Place ID U8#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K13529#Place ID K13529#34.447, 35.817833#No place name.#[Database record](http://geo-kima.org/place/13529)
+urn:cite2:elijahfurman:botPlaces.2021a:K15288#Place ID K15288#34.116667, 35.65#No place name.#[Database record](http://geo-kima.org/Places/Details?id=15288)
+urn:cite2:elijahfurman:botPlaces.2021a:K651#Place ID K651#33.897902, 35.501176#No place name.#[Database record](http://geo-kima.org/place/651)
+urn:cite2:elijahfurman:botPlaces.2021a:K13639#Place ID K13639#33.560243, 35.371208#No place name.#[Database record](http://geo-kima.org/place/13639)
+urn:cite2:elijahfurman:botPlaces.2021a:K21726#Place ID K21726#33.416111, 35.8575#No place name.#[Database record](http://geo-kima.org/place/21726)
+urn:cite2:elijahfurman:botPlaces.2021a:K14095#Place ID K14095#33.268071, 35.209358#No place name.#[Database record](http://geo-kima.org/place/14095)
+urn:cite2:elijahfurman:botPlaces.2021a:K10934#Place ID K10934#43.205842, 2.364076#No place name.#[Database record](http://geo-kima.org/place/10934)
+urn:cite2:elijahfurman:botPlaces.2021a:U12#Place ID U12#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K71#Place ID K71#32.920744, 35.068626#No place name.#[Database record](http://geo-kima.org/place/71)
+urn:cite2:elijahfurman:botPlaces.2021a:K21499#Place ID K21499#-80, 0#No place name.#[Database record](http://geo-kima.org/Places/Details?id=21499)
+urn:cite2:elijahfurman:botPlaces.2021a:K791#Place ID K791#32.8, 34.98333333#No place name.#[Database record](http://geo-kima.org/Places/Details?id=791)
+urn:cite2:elijahfurman:botPlaces.2021a:K1156#Place ID K1156#32.6725, 35.023333#No place name.#[Database record](http://geo-kima.org/Places/Details?id=1156)
+urn:cite2:elijahfurman:botPlaces.2021a:K26255#Place ID K26255#32.829729, 34.967766#No place name.#[Database record](http://geo-kima.org/Places/Details?id=26255)
+urn:cite2:elijahfurman:botPlaces.2021a:U5#Place ID U5#-80, 0#No place name.#No URI.
+urn:cite2:elijahfurman:botPlaces.2021a:K4090#Place ID K4090#33.44948, 35.29948#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=4090)
+urn:cite2:elijahfurman:botPlaces.2021a:K_14307#Place ID K_14307#45.04888889, 35.37916667#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=14307)
+urn:cite2:elijahfurman:botPlaces.2021a:WD_Q2639368#Place ID WD_Q2639368#44.42666667, 33.65333333#No place name.#[Database record](https://www.wikidata.org/wiki/Q2639368)
+urn:cite2:elijahfurman:botPlaces.2021a:K_17819#Place ID K_17819#44.51118, 33.59942#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=17819)
+urn:cite2:elijahfurman:botPlaces.2021a:GN_746983#Place ID GN_746983#40.4, 26.66667#No place name.#[Database record](https://www.geonames.org/746983)
+urn:cite2:elijahfurman:botPlaces.2021a:K_9825#Place ID K_9825#40.41028, 26.67083#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=9825)
+urn:cite2:elijahfurman:botPlaces.2021a:WD_Q6514#Place ID WD_Q6514#40.2, 26.4#No place name.#[Database record](https://www.wikidata.org/wiki/Q6514)
+urn:cite2:elijahfurman:botPlaces.2021a:K_533#Place ID K_533#41.01, 28.96027778#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=533)
+urn:cite2:elijahfurman:botPlaces.2021a:K_17289#Place ID K_17289#38.4, 26.01666667#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=17289)
+urn:cite2:elijahfurman:botPlaces.2021a:K_2689#Place ID K_2689#36.81527778, 27.11027778#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=2689)
+urn:cite2:elijahfurman:botPlaces.2021a:K_468#Place ID K_468#36.43333333, 28.21666667#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=468)
+urn:cite2:elijahfurman:botPlaces.2021a:K_17099#Place ID K_17099#45, 34#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=17099)
+urn:cite2:elijahfurman:botPlaces.2021a:K_667#Place ID K_667#31.2, 29.91666667#No place name.#[Database record](http://data.geo-kima.org/Places/Details?id=667)
+

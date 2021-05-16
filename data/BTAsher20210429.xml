@@ -37,6 +37,8 @@
 						<idno type="URI">http://geo-kima.org/Place/6347</idno>
 					</place>
 					<place xml:id="GN3123754" type="line">
+						<placeName>Spain</placeName>
+						<location><geo>40.73024, 0.86985</geo></location>
 						<idno type="URI">https://www.geonames.org/3123754/</idno>
 					</place>
 					<place xml:id="K9805" type="point">
@@ -54,6 +56,8 @@
 						<idno type="URI">http://geo-kima.org/place/7559</idno>
 					</place>
 					<place xml:id="K6471" type="polygon">
+						<placeName>Spain</placeName>
+						<location><geo>40, -3</geo></location>
 						<idno type="URI">http://geo-kima.org/place/6471</idno>
 					</place>
 					<place xml:id="K582" type="point">

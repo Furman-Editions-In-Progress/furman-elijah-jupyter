@@ -1,0 +1,106 @@
+// 
+
+#!cexversion
+3.0
+
+#!citelibrary
+name#CEX_DESC_GOES_HERE
+urn#CEX_URN_GOES_HERE
+license#CC Share Alike.  For details, see more info.
+
+
+#!datamodels
+Collection#Model#Label#Description
+urn:cite2:cite:verbs.v1:#urn:cite2:cite:datamodels.v1:commentarymodel#Commentary Model#URN comments on URN. See documentation at <https://github.com/cite-architecture/commentary>.
+//
+// We add an extensions_text datamodel. This points to a collection of extended_text_properties.
+//
+urn:cite2:fufolio:extended_text_properties.v1:#urn:cite2:cite:datamodels.v1:extensions_text#Extended Text Properies#Extended Text Property. See documentation at <https://github.com/cite-architecture/>.
+
+//
+// Collection Inventory:
+// Commentaries can be in the form of Collections as well as Texts
+// so we add a Commentary Collection here
+//
+#!citecollections
+URN#Description#Labelling property#Ordering property#License
+urn:cite2:cite:datamodels.v1:#CITE data models#urn:cite2:cite:datamodels.v1.label:##Public domain
+urn:cite2:cite:verbs.v1:#Collection of verbal relations#urn:cite2:cite:verbs.v1.label:##Public Domain
+urn:cite2:elijahfurman:botPlaces.2021a:#Geographic places mentioned in Benjamin of Tudela's Itinerary#urn:cite2:elijahfurman:botPlaces.2021a.label:##CC-BY-SA
+//
+// This is a collection of extended text properties
+//
+urn:cite2:fufolio:extended_text_properties.v1:#Extended Text Properties#urn:cite2:fufolio:extended_text_properties.v1.label:##CC-BY-SA
+
+
+
+// 
+// Properties for the extended_text_properties extension
+// In addition to the (standard) URN and label, there are:
+// a propertyurn, identifying the property of type "string", and
+// its type, an enumerated list of supported extensions.
+// (a different collection could define any other set of extension types.)
+//
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:fufolio:extended_text_properties.v1.urn:#URN#Cite2Urn#
+urn:cite2:fufolio:extended_text_properties.v1.label:#Label#String#
+urn:cite2:fufolio:extended_text_properties.v1.propertyurn:#Property URN#Cite2Urn#
+urn:cite2:fufolio:extended_text_properties.v1.extendedtype:#Extended Text Type#String#geojson,pleiadesuri,latlong,markdown,teixml
+
+//
+// Records for the extended_text_properties collection.
+// Note that we can identify properties at the versioned-collection-level _or_
+// at the individual object level.
+//
+#!citedata
+urn#label#propertyurn#extendedtype
+urn:cite2:fufolio:extended_text_properties.v1:hdt_pleiadesPlaces#Places in Herodotus Identified by Pleiades URI#urn:cite2:fufolio:hdtPlaces.pleiades.uri:#pleiadesuri
+urn:cite2:fufolio:extended_text_properties.v1:hdt_geojson#Places in Herodotus Identified by GeoJson#urn:cite2:fufolio:hdtPlaces.geojson.json:#geojson
+urn:cite2:fufolio:extended_text_properties.v1:elijahPlaces#A collection of places mentioned by Benjamin of Tudela#urn:cite2:elijahfurman:botPlaces.2021a.location:#latlong
+urn:cite2:fufolio:extended_text_properties.v1:kima#Links to Kima URIs#urn:cite2:elijahfurman:botPlaces.2021a.kimaUri:#markdown
+
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:verbs.v1.urn:#URN#Cite2Urn#
+urn:cite2:cite:verbs.v1.label:#label#String#
+urn:cite2:cite:verbs.v1.description:#description#String#
+
+
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:cite:datamodels.v1.urn:#Data model#Cite2Urn#
+urn:cite2:cite:datamodels.v1.label:#Label#String#
+urn:cite2:cite:datamodels.v1.description:#Description#String#
+
+
+#!citedata
+urn#label#description
+urn:cite2:cite:verbs.v1:commentsOn#comments on#subject[Urn] comments on object[Urn]
+urn:cite2:cite:verbs.v1:illustrates#illustrates#subject[Urn] comments on object[Urn]
+urn:cite2:cite:verbs.v1:hasOnIt#has on it#subject[Urn] comments on object[Urn]
+
+
+#!citedata
+urn#label#description
+urn:cite2:cite:datamodels.v1:binaryimg#Binary image model#Model of binary images manipulable by URN reference.  See <TBA>.
+urn:cite2:cite:datamodels.v1:imagemodel#Citable images#Model of citable images from the CITE Architecture.  See <http://cite-architecture.github.io/imagemodel/>.
+urn:cite2:cite:datamodels.v1:dse#DSE model#Diplomatic Scholarly Edition (DSE) model.  See documentation at <https://github.com/cite-architecture/dse>.
+urn:cite2:cite:datamodels.v1:commentarymodel#Commentary model#A citable text or object comments on a citable text or object.  See documentation at <https://github.com/cite-architecture/dse>.
+urn:cite2:cite:datamodels.v1:extensions_text#Extended Text Properties#Extended Text Properties. See dcoumentation at <https://github.com/cite-architecture/extended_text_properties>.
+
+// Geographic collections
+#!citeproperties
+Property#Label#Type#Authority list
+urn:cite2:elijahfurman:botPlaces.2021a.urn:#URN#Cite2Urn#
+urn:cite2:elijahfurman:botPlaces.2021a.label:#Label#String#
+urn:cite2:elijahfurman:botPlaces.2021a.location:#Location Data#String#
+urn:cite2:elijahfurman:botPlaces.2021a.placeName:#Place Name#String#
+urn:cite2:elijahfurman:botPlaces.2021a.kimaUri:#KIMA URI#String#
+
+
+
+
+
+
